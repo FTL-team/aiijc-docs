@@ -50,29 +50,33 @@ Server will return json in this format:
 ```json
 {
   "status": "success",
-  "lanes": [
-    {
-      "straight": true,
-      "left": true,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    }, {
-      "straight": false,
-      "left": false,
-      "right": false,
-      "slightlyLeft": true,
-      "slightlyRight": true,
-      "rightThenLeft": false,
-    }, {
-      "straight": true,
-      "left": false,
-      "right": true,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": true,
-    }
+  "predictions": [
+    [
+      {
+        "straight": true,
+        "left": true,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+      }, 
+      {
+        "straight": false,
+        "left": false,
+        "right": false,
+        "slightlyLeft": true,
+        "slightlyRight": true,
+        "rightThenLeft": false,
+      }, 
+      {
+        "straight": true,
+        "left": false,
+        "right": true,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": true,
+      }
+    ]
   ]
 }
 ```
@@ -90,15 +94,18 @@ Response examples:
 ```json
 {
   "status": "success",
-  "lanes": [
-    {
-      "straight": true,
-      "left": false,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": true,
-    }
+  "predictions": 
+  [
+    [
+      {
+        "straight": true,
+        "left": false,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": true,
+      }
+    ]
   ]
 }
 ```
@@ -117,23 +124,26 @@ Response examples:
 ```json
 {
   "status": "success",
-  "lanes": [
-    {
-      "straight": false,
-      "left": true,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    },
-    {
-      "straight": false,
-      "left": false,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": true,
-      "rightThenLeft": false,
-    }
+  "predictions": 
+  [
+    [
+      {
+        "straight": false,
+        "left": true,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+      },
+      {
+        "straight": false,
+        "left": false,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": true,
+        "rightThenLeft": false,
+      }
+    ]
   ]
 }
 ```
@@ -152,31 +162,34 @@ Response examples:
 ```json
 {
   "status": "success",
-  "lanes": [
-    {
-      "straight": true,
-      "left": true,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    },
-    {
-      "straight": true,
-      "left": false,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    },
-    {
-      "straight": false,
-      "left": false,
-      "right": true,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    }
+  "predictions": 
+  [
+    [
+      {
+        "straight": true,
+        "left": true,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+      },
+      {
+        "straight": true,
+        "left": false,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+     },
+     {
+        "straight": false,
+        "left": false,
+        "right": true,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+     }
+    ]
   ]
 }
 ```

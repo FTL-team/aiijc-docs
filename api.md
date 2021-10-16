@@ -90,15 +90,18 @@ async function getPredictions(files) {
 ```json
 {
   "status": "success",
-  "lanes": [
-    {
-      "straight": true,
-      "left": false,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": true,
-    }
+  "predictions": 
+  [
+    [
+      {
+        "straight": true,
+        "left": false,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": true,
+      }
+    ]
   ]
 }
 ```
@@ -117,23 +120,26 @@ async function getPredictions(files) {
 ```json
 {
   "status": "success",
-  "lanes": [
-    {
-      "straight": false,
-      "left": true,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    },
-    {
-      "straight": false,
-      "left": false,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": true,
-      "rightThenLeft": false,
-    }
+  "predictions": 
+  [
+    [
+      {
+        "straight": false,
+        "left": true,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+      },
+      {
+        "straight": false,
+        "left": false,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": true,
+        "rightThenLeft": false,
+      }
+    ]
   ]
 }
 ```
@@ -152,37 +158,41 @@ async function getPredictions(files) {
 ```json
 {
   "status": "success",
-  "lanes": [
-    {
-      "straight": true,
-      "left": true,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    },
-    {
-      "straight": true,
-      "left": false,
-      "right": false,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    },
-    {
-      "straight": false,
-      "left": false,
-      "right": true,
-      "slightlyLeft": false,
-      "slightlyRight": false,
-      "rightThenLeft": false,
-    }
+  "predictions": 
+  [
+    [
+      {
+        "straight": true,
+        "left": true,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+      },
+      {
+        "straight": true,
+        "left": false,
+        "right": false,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+     },
+     {
+        "straight": false,
+        "left": false,
+        "right": true,
+        "slightlyLeft": false,
+        "slightlyRight": false,
+        "rightThenLeft": false,
+     }
+    ]
   ]
 }
 ```
 
  </td>
 <td>
+
 
 <img src="https://i.imgur.com/niCAyhn.png" height="300"/>
 
