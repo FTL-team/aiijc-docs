@@ -4,7 +4,7 @@
 
 Request example:
 
-```
+```bash
 curl -i -X POST -H "Content-Type: multipart/form-data" -F "data=@image_2021-08-16_17-44-50.png" https://ftl-aiijc.herokuapp.com/predict
 ```
 
@@ -21,6 +21,27 @@ files = {
 
 response = requests.post('https://ftl-aiijc.herokuapp.com/predict', files=files)
 print(response.text)
+```
+
+## JavaScript
+
+```javascript
+async function getPredictions(files) {
+  let res
+    let fd = new FormData()
+
+    files.forEach((file) => {
+      fd.append('img[]', file)
+    })
+
+    res = await fetch(`https://ftl-aiijc.herokuapp.com/predict`, {
+      method: 'POST',
+      body: fd,
+    })
+
+    res = await res.json()
+  return res
+}
 ```
 
 ## Response format
